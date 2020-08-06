@@ -6,8 +6,8 @@ def parse_sp_json(path):
         j = json.loads(f.read())
 
     tasks = pd.DataFrame()
-    for k in j['taskArchive']['entities'].keys():
-        tasks = pd.concat([tasks, pd.Series(j['taskArchive']['entities'][k])], axis=1)
+    for k in j['task']['entities'].keys():
+        tasks = pd.concat([tasks, pd.Series(j['task']['entities'][k])], axis=1)
     tasks = tasks.T.reset_index(drop=True)
     
     metrics = get_entities('metric', j)
