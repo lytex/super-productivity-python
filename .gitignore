@@ -138,5 +138,5 @@ dmypy.json
 cython_debug/
 
 # My stuff
-.json
-.csv
+*.json
+*.csv
